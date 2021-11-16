@@ -34,6 +34,7 @@ if($_POST) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,16 +42,18 @@ if($_POST) {
     <?php require_once '../components/boot.php'?>
     <title>Document</title>
 </head>
+
 <body>
-<div class="container">
-           <div class="mt-3 mb-3">
-               <h1>Create request response</h1>
-           </div>
-           <div class="alert alert-<?=$class;?>" role="alert">
-               <p><?php echo ($message) ?? ''; ?></p>
-               <p><?php echo ($uploadError) ?? ''; ?></p>
-               <a href='../index.php'><button class="btn btn-danger" type='button'>Home</button></a>
-           </div>
-       </div>
+    <div class="container">
+        <div class="mt-3 mb-3">
+            <h1>Create request response</h1>
+        </div>
+        <div class="alert alert-<?=$class;?>" role="alert">
+            <p><?php echo ($message) ?? ''; ?></p>
+            <p><?php echo ($uploadError) ?? ''; ?></p>
+            <a href='../menu.php'><button class="btn btn-danger" type='button'>Home</button></a>
+        </div>
+    </div>
 </body>
+
 </html>

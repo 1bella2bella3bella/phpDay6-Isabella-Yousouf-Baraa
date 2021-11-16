@@ -41,60 +41,63 @@ mysqli_close($connect);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Adm-DashBoard</title>
-   <?php require_once '../components/boot.php'?>
-   <style type="text/css">       
-       .img-thumbnail{
-           width: 70px !important;
-           height: 70px !important;
-       }
-       td
-       {
-           text-align: left;
-           vertical-align: middle;
-       }
-       tr
-       {
-           text-align: center;
-       }
-       .userImage{
-width: 100px;
-height: auto;
-}
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adm-DashBoard</title>
+    <?php require_once '../components/boot.php'?>
+    <style type="text/css">
+    .img-thumbnail {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    td {
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    tr {
+        text-align: center;
+    }
+
+    .userImage {
+        width: 100px;
+        height: auto;
+    }
+    </style>
 </head>
+
 <body>
-<div class="container">
-   <div class="row">
-       <div class="col-2">
-       <img class="userImage" src="../userpictures/admavatar.png" alt="Adm avatar">
-       <p class="">Administrator</p>
-       <a href="logout.php?logout">Sign Out</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img class="userImage" src="../userpictures/admavatar.png" alt="Adm avatar">
+                <p class="">Administrator</p>
+                <a href="logout.php?logout">Sign Out</a>
 
-       </div>
-       <a href='../index.php'><button class='btn btn-danger btn-sm' type='button'>Edit menu</button></a>
-       <div class="col-8 mt-2">
-       <p class='h2'>Users</p>
-       <table class='table table-striped'>
-           <thead class='table-success'>
-               <tr>
-                   <th>Picture</th>
-                   <th>Name</th>
-                   <th>Date of birth</th>
-                   <th>Email</th>
-                   <th>Action</th>
-               </tr>
-           </thead>
-           <tbody>
-           <?=$tbody?>
-           </tbody>
-       </table>
-       </div>
-   </div>
-</div>
+            </div>
+            <a href='../menu.php'><button class='btn btn-danger btn-sm' type='button'>Edit menu</button></a>
+            <div class="col-8 mt-2">
+                <p class='h2'>Users</p>
+                <table class='table table-striped'>
+                    <thead class='table-success'>
+                        <tr>
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Date of birth</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?=$tbody?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
 
+</html>

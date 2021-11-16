@@ -24,31 +24,36 @@ mysqli_close($connect);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome - <?php echo $row['first_name']; ?></title>
-<?php require_once '../components/boot.php'?>
-<style>
-.userImage{
-width: 200px;
-height: 200px;
-}
-.hero {
-   background: rgb(2,0,36);
-   background: linear-gradient(24deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);  
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - <?php echo $row['first_name']; ?></title>
+    <?php require_once '../components/boot.php'?>
+    <style>
+    .userImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(24deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    }
+    </style>
 </head>
+
 <body>
-<div class="container">
-   <div class="hero">
-       <img class="userImage" src="../userpictures/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
-       <p class="text-white" >Hi <?php echo $row['first_name']; ?></p>
-   </div>
-   <a href="logout.php?logout">Sign Out</a>
-   <a href="userupdate.php?id=<?php echo $_SESSION['user'] ?>">Update your profile</a>
-   <a href="../index.php">menu</a>
-</div>
+    <div class="container">
+        <div class="hero">
+            <img class="userImage" src="../userpictures/<?php echo $row['picture']; ?>"
+                alt="<?php echo $row['first_name']; ?>">
+            <p class="text-white">Hi <?php echo $row['first_name']; ?></p>
+        </div>
+        <a href="logout.php?logout">Sign Out</a>
+        <a href="userupdate.php?id=<?php echo $_SESSION['user'] ?>">Update your profile</a>
+        <a href="../menu.php">menu</a>
+    </div>
 </body>
+
 </html>
